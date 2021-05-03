@@ -15,6 +15,7 @@ nav {
     left: 0px;
     font-family: 'Amatic SC', cursive;
     font-size: 1.2em;
+    z-index:10;
 
 }
 
@@ -124,7 +125,6 @@ h1 {
     color: white;
     font-size: 3em;
     margin: auto;
-    position: relative;
 }
 
 @media (max-width:425px) {
