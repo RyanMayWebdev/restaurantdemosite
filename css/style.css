@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Josefin+Slab&family=Nanum+Brush+Script&display=swap');
+
+body {
+    background-color: black;
+}
+
+/*Navigation classes */
+nav {
+    width: 100vw;
+    background-color: black;
+    box-shadow: 0px 0px 10px grey;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.2em;
+
+}
+
+.navcontainer {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.logo {
+    float: left;
+    width: 75px;
+    display: inline;
+}
+
+.navlink {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.navlink:hover {
+    color: red;
+}
+
+.mobilemenu {
+    display: none;
+    position: fixed;
+    text-align: center;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    padding: 10px 20px;
+}
+
+.mobilemenu:hover .mobiledropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.mobiledropdown {
+    display: none;
+    box-shadow: 0px 0px 10px black;
+    list-style-type: none;
+    position: fixed;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    right: 0px;
+    top: 45px;
+    width: 65px;
+    text-align: left;
+}
+
+.fa-bars {
+    padding: 10px 0px 20px 30px;
+    color: white;
+}
+
+
+@media (max-width:700px) {
+    .mobilemenu {
+        display: block;
+    }
+
+    .navlink {
+        display: block;
+        padding: 10px 30px 10px 0px;
+    }
+
+    .navcontainer {
+        display: none;
+    }
+}
+
+/*Welcome screen*/
+.welcome {
+    height: 90vh;
+    margin: 60px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/welcomebackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width:1441px) {
+    .welcome {
+        width: 1440px;
+    }
+
+    .aboutus {
+        width:1440px;
+    }
+}
+
+h1 {
+    font-family: 'Nanum Brush Script', cursive;
+    color: white;
+    font-size: 3em;
+    margin: auto;
+    position: relative;
+}
+
+@media (max-width:425px) {
+    h1 {
+        width: 60%;
+    }
+}
+
+
+
+.readmore {
+    color: white;
+    font-size: 1.3em;
+}
+
+.fa-sort-down {
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    position:relative;
+    animation-name: arrowdown;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes arrowdown {
+    0% {
+        bottom: 0px;
+    }
+
+    50% {
+        bottom: 10px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+@-webkit-keyframes arrowdown {
+    0% {
+        bottom: 0px;
+    }
+
+    50% {
+        bottom: 10px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+
+
+/*Curved underline span class */
+.redunderline {
+    position: relative;
+}
+
+.redunderline:after {
+    border: none;
+    border-top: solid 2px red;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 15px;
+    width: 100%;
+}
+
+/*About us section */
+
+.aboutus {
+    height: 100%;
+    background-color: whitesmoke;
+    color:black;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.aboutus h2 {
+    font-family: 'Nanum Brush Script', cursive;
+    font-size:2em;
+    position:relative;
+    text-align: center;
+}
+
+.description {
+    font-family: 'Josefin Slab', serif;
+    font-size:1.3em;
+    line-height: 1.5;
+    width:75%;
+    margin:0px auto;
+}
+
+#map {
+    height:400px;
+    width:100%;
+}
+
+#hours {
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hours ul {
+    list-style-type: none;
+}

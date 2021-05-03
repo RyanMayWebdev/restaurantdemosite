@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restauraunt Demo Site</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <img class="logo" src="https://logopond.com/logos/e6b478cef54b8fb8acfd1b4dee22f543.png" alt="Sushi logo">
+        </div>
+
+            <ul class="navcontainer">
+                <li><a class="navlink" href="#home">Home</a></li>
+                <li><a class="navlink" href="#about">About Us</a></li>
+                <li><a class="navlink" href="#">Menu</a></li>
+                <li><a class="navlink" href="#">Contact</a></li>
+            </ul>
+
+            <div class="mobilemenu">
+                <i class="fas fa-bars"></i>
+                <ul class="mobiledropdown">
+                    <li><a class="navlink" href="#">Home</a></li>
+                    <li><a class="navlink" href="#">About Us</a></li>
+                    <li><a class="navlink" href="#">Menu</a></li>
+                    <li><a class="navlink" href="#">Contact</a></li>
+                </ul>
+            </div>
+
+    </nav>
+
+    <div class="welcome" id="home">
+        <h1>Welcome to <span class="redunderline">Choi Sushi</span></h1>
+
+        <div class="readmorecontainer">
+            <h2 class="readmore">Read More</h2>
+            <i class="fas fa-sort-down"></i>
+        </div>
+
+    </div>
+
+    <article class="aboutus" id="about">
+        <section class="description">
+            <h2><span class="redunderline">About Us</span></h2>
+            <p>At Choi Sushi, our mission is to be the leader in the Japanese restaurant industry.
+             We are committed to satisfying our customers completely with the best quality food, 
+             excellent service and great value while providing the most pleasant, clean ambiance. 
+             Welcome to Choi Sushi Restaurant, the people behind sushi for all mankind.
+            Never tried sushi or Japanese cuisine? Try us and we guarantee you will walk out hooked on our food. 
+            That’s what we do best; making non-believers into believers that Japanese cuisine is the new comfort food.
+            When you walk into a Choi Sushi you won’t be overwhelmed with Asian decor and music.
+            What you will encounter is a casual atmosphere with today’s hottest music playing, 
+            people smiling and our friendly staff welcoming you through the doors. Please Come Eat & Drink. Have Fun.</p>
+        </section>
+
+        <section class="description" id="location">
+            <h2><span class="redunderline">Location</span></h2>
+            <div id="map"></div>
+            <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7vtgKhVLoxHj5WG-HGXn02QNcpk7Yg6M&callback=initMap&libraries=&v=weekly"
+            async
+          ></script>
+        </section>
+
+        <section class="description" id="hours">
+            <h2><span class="redunderline">Hours</span></h2>
+            <ul>
+                <li>Mon: 4:00 pm - 9:00 pm</li>
+                <li>Tue-Fri: 11:00 am - 9:00 pm</li>
+                <li>Sat: 12:00 pm - 9:00 pm</li>
+                <li>Sun: Closed</li>
+            </ul>
+        </section>
+    </article>
+</body>
+
+</html>
