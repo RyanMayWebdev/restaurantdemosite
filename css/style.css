@@ -1,12 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Josefin+Slab&family=Nanum+Brush+Script&display=swap');
 
 body {
-    background-color: black;
+    background-color: white;
+    margin:0;
 }
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Nanum Brush Script', cursive;
+}
+
+/* Headings */
+.welcome-heading {
+    font-weight: 900;
+    color: white;
+    font-size: 5em;
+    margin: auto;
+    text-shadow: 1px 1px 0px black;
+}
+
+.section-headings {
+    font-size:3rem;
+    position:relative;
+    text-align: center;
+}
+
+/* Containers */
+
+.content-container {
+    font-family: 'Josefin Slab', serif;
+    font-size:1.3em;
+    line-height: 1.5;
+    width:75%;
+    margin:0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-container {
+    height: 100%;
+    width: 75vw;
+    color:black;
+    margin:0px auto;
+    padding-top:60px;
+    border-radius: 25px;
+}
+
 
 /*Navigation classes */
 nav {
-    width: 100vw;
+    width: 100%;
+    height:fit-content;
     background-color: black;
     box-shadow: 0px 0px 10px grey;
     position: fixed;
@@ -14,34 +58,39 @@ nav {
     right: 0px;
     left: 0px;
     font-family: 'Amatic SC', cursive;
-    font-size: 1.2em;
+    font-size: 2em;
     z-index:10;
 
 }
 
 .navcontainer {
+    margin:20px 0px;
+    height: max-content;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     list-style-type: none;
 }
 
 .logo {
     float: left;
-    width: 75px;
+    width: 100px;
     display: inline;
 }
 
 .navlink {
-    padding: 10px 20px;
+    padding: 20px 20px;
     text-decoration: none;
-    color: white;
+    color: #fff;
 }
 
 
 .navlink:hover {
-    color: red;
+    text-decoration: underline;
+    text-decoration-color: white;
 }
 
+/* Mobile nav menu, for tablet and below */
 .mobilemenu {
     display: none;
     position: fixed;
@@ -64,7 +113,7 @@ nav {
     box-shadow: 0px 0px 10px black;
     list-style-type: none;
     position: fixed;
-    background-color: black;
+    background-color: green;
     color: white;
     padding: 10px;
     padding-left: 20px;
@@ -79,7 +128,108 @@ nav {
     color: white;
 }
 
+/*Welcome screen*/
+.welcome {
+    height: 60vh;
+    width: 100%;
+    margin: 60px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://images3.alphacoders.com/879/879538.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
 
+}
+
+/*Curved underline span class */
+.redunderline {
+    position: relative;
+}
+
+.redunderline:after {
+    border: none;
+    border-top: solid 4px red;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 15px;
+    width: 100%;
+}
+/* Menu Section */
+
+.menu-title-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+}
+.menu-link {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-link:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.menu-slidebox {
+    height:fit-content;
+    width:75vw;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.menu-slide {
+    display: flex;
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: center;
+    flex-shrink: 0;
+    height:fit-content;
+    width:100%;
+    scroll-snap-align: start;
+}
+
+.menu-slide div {
+    margin: 60px;
+}
+
+.menu-slidebox::-webkit-scrollbar{
+    display: none;
+}
+/*About us section */
+
+#map {
+    height:400px;
+    width:100%;
+}
+
+#hours {
+    margin:auto;
+}
+
+.hours-list {
+    list-style-type: none;
+}
+
+
+/* Media Queries */
 @media (max-width:700px) {
     .mobilemenu {
         display: block;
@@ -93,151 +243,20 @@ nav {
     .navcontainer {
         display: none;
     }
-}
 
-/*Welcome screen*/
-.welcome {
-    height: 90vh;
-    margin: 60px auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../images/welcomebackground.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    .logo {
+        width:75px;
+    }
 }
 
 @media (min-width:1441px) {
-    .welcome {
-        width: 1440px;
-    }
-
     .aboutus {
         width:1440px;
     }
 }
-
-h1 {
-    font-family: 'Nanum Brush Script', cursive;
-    color: white;
-    font-size: 3em;
-    margin: auto;
-}
-
 @media (max-width:425px) {
-    h1 {
-        width: 60%;
+    .welcome-heading {
+        width: 70%;
+        font-size: 3.5rem;
     }
-}
-
-
-
-.readmore {
-    color: white;
-    font-size: 1.3em;
-}
-
-.fa-sort-down {
-    text-align: center;
-    color: white;
-    font-size: 1.2em;
-    position:relative;
-    animation-name: arrowdown;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes arrowdown {
-    0% {
-        bottom: 0px;
-    }
-
-    50% {
-        bottom: 10px;
-    }
-
-    100% {
-        bottom: 0px;
-    }
-}
-
-@-webkit-keyframes arrowdown {
-    0% {
-        bottom: 0px;
-    }
-
-    50% {
-        bottom: 10px;
-    }
-
-    100% {
-        bottom: 0px;
-    }
-}
-
-
-
-/*Curved underline span class */
-.redunderline {
-    position: relative;
-}
-
-.redunderline:after {
-    border: none;
-    border-top: solid 2px red;
-    border-radius: 50%;
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    height: 15px;
-    width: 100%;
-}
-
-/*About us section */
-
-.aboutus {
-    height: 100%;
-    background-color: whitesmoke;
-    color:black;
-    margin:auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 25px;
-}
-
-.aboutus h2 {
-    font-family: 'Nanum Brush Script', cursive;
-    font-size:2em;
-    position:relative;
-    text-align: center;
-}
-
-.description {
-    font-family: 'Josefin Slab', serif;
-    font-size:1.3em;
-    line-height: 1.5;
-    width:75%;
-    margin:0px auto;
-}
-
-#map {
-    height:400px;
-    width:100%;
-}
-
-#hours {
-    margin:auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#hours ul {
-    list-style-type: none;
 }
