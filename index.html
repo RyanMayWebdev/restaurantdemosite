@@ -8,7 +8,6 @@
     <title>Restauraunt Demo Site</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/all.css" rel="stylesheet">
-    <script src="./index.js"></script>
 </head>
 
 <body>
@@ -45,14 +44,14 @@
         <h2 class="section-headings"><span class="redunderline">Menu</span></h2>
         <section class="menu-titles">
             <ul class="menu-title-list">
-                <li><a class="menu-link" href="#appetizers">Appetizers</a></li>
-                <li><a class="menu-link" href="#entrees">Entrees</a></li>
-                <li><a class="menu-link" href="#rolls">Rolls</a></li>
-                <li><a class="menu-link" href="#desserts">Desserts</a></li>
+                <li class="menuOption"  id="appetizerLink">Appetizers</li>
+                <li class="menuOption"  id="entreeLink" >Entrees</li>
+                <li><a class="menuOption"  id="rollLink">Rolls</a></li>
+                <li><a class="menuOption"  id="dessertLink">Desserts</a></li>
             </ul>
         </section>
-        <div class="menu-slidebox">
-            <div class="menu-slide" id="appetizers">
+        
+            <div class ="invisible menu-box" id="appetizers">
                 <div>menu itemsssssss</div>
                 <div>menu itemsssssss</div>
                 <div>menu itemsssssss</div>
@@ -67,15 +66,16 @@
                 <div>menu itemsssssss</div>
 
             </div>
-            <div class="menu-slide" id="entrees">
+            <div class ="invisible menu-box"  id="entrees">
                 <p>But entrees are more filling</p>
             </div>
-        </div>
+        
 
     </article>
 
 
     <article class="article-container">
+
         <section class="content-container" id="location">
             <h2 class="section-headings"><span class="redunderline">Location</span></h2>
             <div id="map"></div>
@@ -84,7 +84,7 @@
                 async></script>
         </section>
 
-        <section class="content-container" id="hours">
+        <section id="hours">
             <h2 class="section-headings"><span class="redunderline">Hours</span></h2>
             <ul class="hours-list">
                 <li>Mon: 4:00 pm - 9:00 pm</li>
@@ -96,6 +96,7 @@
 
         <section class="content-container" id="about">
             <h2 class="section-headings"><span class="redunderline">About Us</span></h2>
+            <img class="about-img" src="https://www.justonecookbook.com/wp-content/uploads/2020/06/Dragon-Roll-0286-I-500x375.jpg" alt="dragon-roll-img">
             <p>At Choi Sushi, our mission is to be the leader in the Japanese restaurant industry.
                 We are committed to satisfying our customers completely with the best quality food,
                 excellent service and great value while providing the most pleasant, clean ambiance.
@@ -109,6 +110,7 @@
                 Fun.</p>
         </section>
     </article>
+    <script src="JavaScript/index.js"></script>
 </body>
 
 </html>
