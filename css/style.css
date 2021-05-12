@@ -1,32 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Josefin+Slab&family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200&family=Mr+De+Haviland&display=swap');
 
 body {
     background-color: white;
     margin: 0;
+    font-family: 'Josefin Slab', serif;
     text-align: center;
+
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Nanum Brush Script', cursive;
-}
 
 /* Headings */
 .welcome-heading {
     color: white;
+    font-family: 'Mr De Haviland', cursive;
     font-size: 5em;
-    font-weight: 900;
-    padding: 20px 75px;
-    text-shadow: 1px 1px 0px black;
+    font-weight: 400;
+    padding: 1.5rem 3rem;
 }
 
 .welcome-subheading {
     font-size: 3rem;
-    padding: 20px 75px;
+    font-weight: 400;
+
 }
 
 .section-headings {
@@ -52,13 +47,16 @@ h6 {
     height: 100%;
     width: 75vw;
     color: black;
-    margin: 0px auto;
-    padding-top: 60px;
+    margin: 0 auto;
+    padding: 75px 0;
     border-radius: 25px;
 }
 
 .welcome-box {
     border:5px solid black;
+    box-shadow: 0px 0px 1px black;
+    background-color: rgba(161, 161, 161, 0.5);
+    
 }
 
 /* Images */
@@ -78,7 +76,7 @@ nav {
     top: 0px;
     right: 0px;
     left: 0px;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Josefin Slab', serif;
     font-size: 2em;
     z-index: 10;
 
@@ -177,7 +175,7 @@ nav {
     border-radius: 50%;
     content: "";
     position: absolute;
-    bottom: -10px;
+    bottom: -13px;
     left: 0;
     height: 15px;
     width: 100%;
@@ -190,13 +188,16 @@ nav {
     align-items: center;
     justify-content: space-evenly;
     list-style-type: none;
-    font-family: 'Amatic SC', cursive;
-    font-size: 2rem;
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 15px 0 50px;
 }
 
 .menuOption {
     text-decoration: none;
     color: black;
+    padding: 0 3px;
 }
 
 .menuOption:hover {
@@ -208,29 +209,39 @@ nav {
 
 .menu-box {
     display: flex;
-    font-family: 'Josefin Slab', serif;
-    text-align: center;
+    align-self: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    align-self: center;
     flex-shrink: 0;
+
+    margin:0 auto;
     height: fit-content;
-    width: 100%;
+    width: 60%;
+
+
+    font-family: 'Josefin Slab', serif;
+    text-align: center;
 }
 
+.menu-item {
+    padding: 0 25px;
+}
+
+.menu-item-heading {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.selected-menu-title {
+    text-decoration: underline;
+    text-decoration-color: red;
+}
 .invisible {
-    visibility: hidden;
+    display:none;
 }
 
 .visible {
-    visibility: visible;
-}
-.menu-slide div {
-    margin: 60px;
-}
-
-.menu-slidebox::-webkit-scrollbar {
-    display: none;
+    display: block;
 }
 
 /*About us section */
@@ -246,7 +257,7 @@ nav {
 
 .hours-list {
     list-style-type: none;
-    margin: 30px 0px;
+    padding-right:40px;
 }
 
 .hours-list li {
