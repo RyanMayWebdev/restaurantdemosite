@@ -27,9 +27,15 @@ function initMap() {
 // Add click listening events to all of the menu page titles
 
 var menuLinks = document.querySelectorAll(".menuOption");
+var navLinks = document.querySelectorAll(".navlink");
+document.querySelector("#menuDrop").addEventListener("click", mobileMenuShow);
 
 for (let x = 0; x < menuLinks.length; x++) {
   menuLinks[x].addEventListener("click", displayMenu);
+}
+
+for (let x = 0; x < navLinks.length; x++) {
+  navLinks[x].addEventListener("click", mobileMenuHide);
 }
 
 
@@ -44,15 +50,23 @@ function displayMenu() {
 
   if (menuId.includes("appetizerLink")) {
     document.getElementById("appetizers").classList.add("visible");
-  } 
-  else if (menuId.includes("entreeLink")) {
+  } else if (menuId.includes("entreeLink")) {
     document.getElementById("entrees").classList.add("visible");
-  } 
-  else if (menuId.includes("rollLink")) {
+  } else if (menuId.includes("rollLink")) {
     document.getElementById("rolls").classList.add("visible");
-  } 
-  else if (menuId.includes("dessertLink")) {
+  } else if (menuId.includes("dessertLink")) {
     document.getElementById("desserts").classList.add("visible");
   }
 
+}
+
+function mobileMenuShow() {
+  document.querySelector(".mobiledropdown").classList.remove("mobileMenuHide");
+  document.querySelector(".mobiledropdown").classList.add("mobileMenuReveal");
+  document.querySelector("#Main").addEventListener("click",mobileMenuHide);
+}
+
+function mobileMenuHide () {
+  document.querySelector(".mobiledropdown").classList.add("mobileMenuHide");
+  document.querySelector(".mobiledropdown").classList.remove("mobileMenuReveal");
 }

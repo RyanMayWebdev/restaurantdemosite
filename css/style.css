@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@200&family=Mr+De+Haviland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Mr+De+Haviland&display=swap');
 
 body {
     background-color: white;
@@ -6,6 +6,10 @@ body {
     font-family: 'Josefin Slab', serif;
     text-align: center;
 
+}
+
+p {
+    font-weight: 400;
 }
 
 
@@ -25,7 +29,7 @@ body {
 }
 
 .section-headings {
-    font-size: 3rem;
+    font-size: 2.5rem;
     position: relative;
     text-align: center;
 }
@@ -55,7 +59,7 @@ body {
 .welcome-box {
     border:5px solid black;
     box-shadow: 0px 0px 1px black;
-    background-color: rgba(161, 161, 161, 0.5);
+    background-color: rgba(161, 161, 161, 0.6);
     
 }
 
@@ -64,6 +68,7 @@ body {
 .about-img {
     border-radius: 50%;
     flex-shrink: 1;
+    padding: 30px 0;
     width: 300px;
 }
 /*Navigation classes */
@@ -120,15 +125,18 @@ nav {
     padding: 10px 20px;
 }
 
-.mobilemenu:hover .mobiledropdown {
+.mobileMenuReveal{
+    visibility: visible;
+}
+
+.mobileMenuHide {
+    visibility: hidden;
+}
+.mobiledropdown {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-}
-
-.mobiledropdown {
-    display: none;
     box-shadow: 0px 0px 10px black;
     list-style-type: none;
     position: fixed;
@@ -136,9 +144,9 @@ nav {
     color: white;
     padding: 10px;
     padding-left: 20px;
-    right: 0px;
+    right: 10px;
     top: 45px;
-    width: 65px;
+    width: max-content;
     text-align: left;
 }
 
@@ -252,6 +260,7 @@ nav {
 }
 
 #hours {
+    padding: 75px 0;
     text-align: center;
 }
 
@@ -264,6 +273,28 @@ nav {
     padding: 20px 0;
 }
 
+/* Contact Section */
+
+.contact-container {
+    background-color: black;
+    color: white;
+    padding: 75px 0;
+    width:100vw;
+}
+
+.contact-icons {
+    font-size: 2rem;
+    padding: 0 20px;
+}
+
+#contact p {
+    font-size: 1.5rem;
+    padding-right:20px;
+}
+
+.icons-container {
+    padding-right:20px;
+}
 
 /* Media Queries */
 @media (max-width:700px) {
